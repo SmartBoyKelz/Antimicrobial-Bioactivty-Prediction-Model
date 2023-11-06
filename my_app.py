@@ -70,7 +70,7 @@ def fileDownload(df):
 
 def build_model(input_data, load_data):
   #reads in saved regression model
-    load_model = joblib.load('staph_RFR.pkl')
+    load_model = joblib.load('XGR.pkl')
     prediction = load_model.predict(input_data)
     st.header('**Predicted Value for Molecule(s) Provided**')
     predicted_output = pd.Series(prediction, name = 'pIC50')
