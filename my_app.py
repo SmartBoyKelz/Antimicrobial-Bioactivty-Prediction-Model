@@ -86,7 +86,7 @@ def build_model(input_data, load_data):
 
 
 # Use st.video to display the video
-vid = st.video(r"C:\Users\PCMANIA\OneDrive\Desktop\staph_data\ui.mp4")
+vid = st.video("ui.mp4")
      
 #page Title
 st.markdown("""
@@ -108,7 +108,7 @@ This project is dedicated to developing an application that predicts pIC50 conce
 
 with st.sidebar.header('1. Upload CSV data'):
     uploaded_file = st.sidebar.file_uploader("Upload your input file", type=['txt'])
-    file_path = "C:\\Users\\PCMANIA\\OneDrive\\Desktop\\staph_data\\Demo.txt"
+    file_path = "Demo.txt"
     st.sidebar.markdown(f"[Example input file]({file_path})")
 
 
@@ -162,12 +162,12 @@ if st.sidebar.button('Predict'):
                 st.write(f"Invalid SMILES: {smiles}")
                 
     from PIL import Image
-    image = Image.open("C:\\Users\\PCMANIA\\OneDrive\\Desktop\\staph_data\\computational-biochemicalanalysis-backgrounf.jpg")
+    image = Image.open("computational-biochemicalanalysis-backgrounf.jpg")
     st.image(image, caption='Aso Kelechi 2023', use_column_width=True)
        
 else:
     st.info('Upload input data in the sidebar to start!')       
     from PIL import Image
-    image = Image.open("C:\\Users\\PCMANIA\\OneDrive\\Desktop\\staph_data\\computational-biochemicalanalysis-backgrounf.jpg")
+    image = Image.open("computational-biochemicalanalysis-backgrounf.jpg")
     st.image(image, caption='Aso Kelechi 2023', use_column_width=True)
 
