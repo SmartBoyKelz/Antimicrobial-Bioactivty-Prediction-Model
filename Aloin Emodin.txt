@@ -1,0 +1,1 @@
+O=C1c2cccc(O)c2C(=O)c2c(O)cc(CO)cc21 CHEMBL40275
