@@ -94,7 +94,7 @@ st.markdown("""
 
 # 🧪 **pIC50 Concentration Against *Staphylococcus aureus* Prediction App** 🧫
 
-This project is dedicated to developing an application that predicts pIC50 concentrations concerning *Staphylococcus aureus*. The pIC50 concentration is a vital metric, calculated as the negative logarithm of the inhibitory concentration. Our app employs advanced predictive models using `Random Forest Regression algorithm` to estimate these concentrations, offering valuable insights for drug discovery and therapeutic research focused on combatting *Staphylococcus aureus*. 🌡🔬🦠💊💡
+This project is dedicated to developing an application that predicts pIC50 concentrations concerning *Staphylococcus aureus*. The pIC50 concentration is a vital metric, calculated as the negative logarithm of the inhibitory concentration. Our app employs advanced predictive models using `XGboost Regression algorithm` to estimate these concentrations, offering valuable insights for drug discovery and therapeutic research focused on combatting *Staphylococcus aureus*. 🌡🔬🦠💊💡
 
 **Credits**
 - App built in `Python` + `Streamlit` by  [Aso Kelechi](https://www.linkedin.com/in/seml/) 
