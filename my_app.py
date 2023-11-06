@@ -7,6 +7,7 @@ import pickle
 import joblib
 import os
 import subprocess
+from rdkit.Chem.Draw import rdMolDraw2D
 from rdkit import Chem
 from rdkit.Chem import AllChem
 from rdkit.Chem import Draw
