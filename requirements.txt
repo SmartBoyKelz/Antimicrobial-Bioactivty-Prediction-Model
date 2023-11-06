@@ -1,11 +1,12 @@
 requests==2.25.1
-streamlit==0.71.0
 base58==2.0.1
 py3Dmol
 rdkit==2023.3.3
 rdkit-pypi==2021.3.3
 chembl-webresource-client==0.10.3
 joblib==1.0.1
-pandas
 requests-cache==0.6.0
-numpy
+streamlit==1.22.0
+pandas==2.0.1
+scikit_learn==1.2.2
+numpy==1.24.3
