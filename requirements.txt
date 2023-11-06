@@ -1,4 +1,5 @@
 streamlit==0.71.0
+libXrender==0.9.10
 base58==2.0.1
 py3Dmol==0.9.0
 rdkit==2023.3.3
