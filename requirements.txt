@@ -1,4 +1,4 @@
-requests==2.25.1
+requests
 base58==2.0.1
 py3Dmol
 rdkit==2023.3.3
