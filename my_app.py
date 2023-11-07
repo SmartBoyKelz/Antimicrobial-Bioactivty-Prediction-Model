@@ -1,4 +1,3 @@
-
 import streamlit as st
 import pandas as pd
 from PIL import Image
@@ -11,9 +10,7 @@ from rdkit.Chem.Draw import rdMolDraw2D
 from rdkit import Chem
 from rdkit.Chem import AllChem
 from rdkit.Chem import Draw
-from rdkit import Chem
 from rdkit.Chem import Descriptors, Lipinski
-
 from chembl_webresource_client.new_client import new_client
 client = new_client
 
@@ -25,8 +22,6 @@ def calc_Lipinski_desc(smile):
 
         if cmpdx:
             descriptor = {
-                  
-        
                   "Molecular wt" : Descriptors.MolWt(cmpdx),
                   "LogP" : Descriptors.MolLogP(cmpdx),
                   "Hydrogen Bond Donors" : Descriptors.NumHDonors(cmpdx),
@@ -34,10 +29,8 @@ def calc_Lipinski_desc(smile):
                   "Aromatic Proportion" : Descriptors.FractionCSP3(cmpdx),
                   "Rotatable bonds" : Descriptors.NumRotatableBonds(cmpdx)
               }
-
         else:
-            descriptor = {
-                  
+            descriptor = {             
                   "Molecular wt" : "Invalid_cmpd",
                   "LogP" :"Invalid_cmpd",
                   "Hydrogen Bond Donors" : "Invalid_cmpd",
@@ -45,7 +38,6 @@ def calc_Lipinski_desc(smile):
                   "Aromatic Proportion" : "Invalid_cmpd",
                   "Rotatable bonds" : "Invalid_cmpd"
               }
-
         cmpds.append(descriptor)
     return pd.DataFrame(cmpds)
 
@@ -57,15 +49,12 @@ def desc_calc():
     output, error = process.communicate()
     
 
-
 def fileDownload(df):
     csv = df.to_csv(index=False)
     b64 = base64.b64encode(csv.encode()).decode()
     href = f'<a href = "data:file/csv;base64, {b64}" download = "prediction.csv">Download Predictions</a>'
     href = f'<a href="data:file/csv;base64,{b64}" download="prediction.csv">Download Predictions</a>'
     return href
-
-
 
 
 def build_model(input_data, load_data):
@@ -82,9 +71,6 @@ def build_model(input_data, load_data):
     st.markdown(fileDownload(df), unsafe_allow_html = True)
     st.write("prediction:", prediction)
     st.write("Lipinski's properties:", df)
-
-
-
 
 # Use st.video to display the video
 vid = st.video("ui.mp4")
@@ -111,7 +97,6 @@ with st.sidebar.header('1. Upload CSV data'):
     uploaded_file = st.sidebar.file_uploader("Upload your input file", type=['txt'])
     file_path = "Demo.txt"
     st.sidebar.markdown(f"[Example input file]({file_path})")
-
 
 if st.sidebar.button('Predict'):
     try:
@@ -142,7 +127,6 @@ if st.sidebar.button('Predict'):
     # Read descriptor list used in previously built model
         desc_1 = desc.drop(['Name'], axis = 1)
         desc_subset =desc_1
-
 
     # Apply trained model to make prediction on query compounds
         build_model(desc_subset, load_data)
