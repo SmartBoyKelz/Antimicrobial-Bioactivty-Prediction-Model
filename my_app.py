@@ -92,7 +92,6 @@ This project is dedicated to developing an application that predicts pIC50 conce
 3. Descriptor calculated using [PaDEL-Descriptor](http://www.yapcwsoft.com/dd/padeldescriptor/) [[Read the Paper]](https://doi.org/10.1002/jcc.21707).
 ---
 """)
-
 with st.sidebar.header('1. Upload CSV data'):
     uploaded_file = st.sidebar.file_uploader("Upload your input file", type=['txt'])
     file_path = "Demo.txt"
